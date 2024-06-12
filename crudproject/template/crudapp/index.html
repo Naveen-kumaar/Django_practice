@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+
+{%load static%}    
+
+    {% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - Creation</title>
+</head>
+<body>
+    <h1>CRUD CREATION</h1>
+    <h2>student details</h2>
+    <table>
+
+        <th>
+            <td>STUDENT NO</td>
+            <td>STUDENT NAME</td>
+            <td>STUDENT CLASS</td>
+            <td>STUDENT ADDRESS</td>
+        </th>
+   
+    <tr>
+        {%for i in student %}
+        <tr>
+        <td>{{i.sno}}</td>
+        <td>{{i.sname}}</td>
+        <td>{{i.sclass}}</td>
+        <td>{{i.saddress}}</td>
+        <td><a href="/update/{{i.id}}"><button type = "button">UPDATE</button></a><a href="/delete/{{i.id}}"><button type = "button">DELETE</button></a></td>
+        </tr>
+        {% endfor %}
+    </tr>
+    </table>
+    <a href="/check"><button type = "button">submit</button></a>
+     {% endblock %}  
+</body>
+</html>

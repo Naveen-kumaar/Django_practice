@@ -1,0 +1,20 @@
+h1{
+    color: blue;
+}
+.navbar{
+    background-color: rgb(58, 188, 221);
+    border-color:rgb(9, 174, 240);
+    font-family: 'Times New Roman', Times, serif;
+    color:white;
+
+}
+.nav{
+    font-family:'Times New Roman', Times, serif;
+}
+nav>li>a{
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.container{
+    margin-left: 100px;
+}

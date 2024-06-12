@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+
+{%load static%}    
+
+    {% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - Creation</title>
+</head>
+<body>
+    <h1>upade student details</h1>
+    <from method="POST">
+        
+    student roll no<input type="text"name="sno"value="{{student.sno}}">
+    student name<input type="text"name="sname"value="{{student.sname}}">
+    student class<input type="text"name="sclass"value="{{student.sclass}}">
+    student address<input type="text"name="saddress"value="{{student.saddress}}">
+    {% csrf_token %}
+    <a href="/update/{{i.id}}"><button type="submit">update</button></a>
+    </from>
+     {% endblock %}  
+</body>
+</html>

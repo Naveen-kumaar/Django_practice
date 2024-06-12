@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATABASE</title>
+</head>
+<body>
+    {% if stud_list %}
+    <table>
+    {% for student in stud_list %}
+<tr>
+    <td>{{student.studNo}}</td>
+    <td>{{student.studName}}</td>
+    <td>{{student.studfee}}</td>
+    <td>{{student.studAddress}}</td></tr>
+    {% endfor %}
+    { % endif %}
+    </table>
+
+</body>
+</html>
