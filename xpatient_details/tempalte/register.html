@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+{% load static%}
+{% block content%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register-page</title>
+</head>
+<body>
+    <div class="frm">
+        <form method="POST">
+            <h2>Register-page</h2>
+            {% csrf_token %}
+            {% load static %}
+            <label for="name">Name</label>
+            <input type="text" placeholder="Enter your name"name=Name id="name">
+            
+            <label for="E-Mail">Email</label>
+            <input type="text" placeholder="Enter your E-Mail ID"name=Email id="Email">
+            
+            <label for="Password">Password</label>
+            <input type="password" placeholder="Enter your Password"name=Password id="Password">
+            
+            <label for="Conform_password">Conform Password</label>
+            <input type="password" placeholder="Enter your Conform password"name=Conform_password id="Conform_password">
+
+            <button type="submit">Submit</button>
+            <button type="clear">Clear</button>
+
+        </form>
+
+    </div>
+    {% endblock %}
+</body>
+</html>

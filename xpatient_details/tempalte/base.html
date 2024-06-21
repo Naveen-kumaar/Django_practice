@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>virma Physio</title>
+    <link rel="stylesheet" href="{% static 'index.css'}">
+</head>
+<body>
+    
+    <nav class="nav">
+        <div id="img">
+            <img src="Medical-health-logo-design-on-transparent-background-PNG.png">
+        </div>
+        <label class="logo">Virma-Physio</label>
+        <ul class="list">
+            <li><a href ="#">Home</a></li>
+            <li><a href ="#">About</a></li>
+            <li><a href ="#">Login</a></li>
+            <li><a href ="#">Register</a></li>
+            <li><a href ="#">Contact</a></li>
+        </ul> 
+        <div class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+
+    </nav>
+    <h2>human resources</h2>
+
+    {% endblock %}
+</body>
+</html>
