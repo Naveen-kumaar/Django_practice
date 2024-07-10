@@ -20,6 +20,6 @@ from patient_detail import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('check/',views.home),
-    path('register/',views.register)
+    path('check/',views.select_view),
+    path('register/',views.create_view)
 ]

@@ -10,6 +10,15 @@
 </head>
 <body>
     <h1>Patient Detail</h1>
+    <h2>Add New Patient Information Here</h2>
+    <form method="POST">
+        {{form.as_p}}
+
+        {% csrf_token %}
+        <button type ='submit'>Add Patient</button>
+    </form>
+    {% endblock %}
+    
 {% endblock %}    
 </body>
 </html>
