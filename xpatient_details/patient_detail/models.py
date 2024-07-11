@@ -8,3 +8,8 @@ class Patient(models.Model):
     patient_contactNo = models.IntegerField()
     patient_injury = models.CharField(max_length=40)
 
+class Login(models.Model):
+    user_name=models.CharField(max_length=20)
+    email=models.CharField(max_length=30)
+    mobile=models.CharField(max_length=10)
+    password=models.CharField(max_length=10)
