@@ -1,37 +1,27 @@
-{% extends "base.html" %}
 <!DOCTYPE html>
-{% load static%}
-{% block content%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login-page</title>
+    <title>Signup page</title>
+    <style>
+        #container{
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <div class="frm">
-        <form method="POST">
-            {% csrf_token %}
-            {% load static %}
+    <div id="container">
+        <form action="POST">
             <label for="name">Name</label>
-            <input type="text" placeholder="Enter your name"name=Name id="name">
-            
-            <label for="E-Mail">Email</label>
-            <input type="text" placeholder="Enter your E-Mail ID"name=Email id="Email">
-
-            <label for="Mobilee">Mobile</label>
-            <input type="text" placeholder="Enter your Mobile NO"name=Mobile id="Mobile">
-            
-            <label for="Password">Password</label>
-            <input type="password" placeholder="Enter your Password"name=Password id="Password">
-        
-
-            <button type="submit">Submit</button>
-            
-
+            <input type="text" placeholder="Enter your Name" name="name">
+            <label for="mail">Email</label>
+            <input type="text" placeholder="Enter your E-Mail" name="mail">
+            <label for="pwd">Password</label>
+            <input type="password" placeholder="Enter your Password" name="pwd">
+            <label for="con-pwd">Conform Password</label>
+            <input type="password" placeholder="Conform Password" name="con-pwd">
         </form>
-
     </div>
-    {% endblock %}
 </body>
 </html>
